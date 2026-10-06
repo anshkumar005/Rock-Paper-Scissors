@@ -1,28 +1,43 @@
-console.log("connected");
-userInput = prompt("choose: rock paper scissors");
-console.log(userInput)
-
 
 function playGame(){
     for (let i=1; i<=5; i++){
-        getComputerChoice();
+        getHumanChoice();
     }
 }
 playGame();
 
 
+function playRound(){
+    console.log("working")
+};
+
+
 function getComputerChoice(){
     let number = Math.random();
     if (number>=0 && number<=0.3){
-        console.log('1/3');
+        return "rock";
     } else if (number>0.3 && number<=0.6){
-        console.log("2/3")
+        return "paper";
     } else {
-        console.log("3/3")
+        return "scissors";
     }
-}
+};
 
-function playRound(){
-    console.log("working")
+function getHumanChoice() {
+    userInput = prompt("choose one : rock paper scissors").toLowerCase();
+    if (userInput==="rock") {
+        console.log("you have chosen ROCK");
+        return "rock";
+    } else if (userInput==="paper"){
+        console.log("you have chosen PAPER");
+        return "paper";
+    } else if (userInput==="scissors"){
+        console.log("you have chosen SCISSORS");
+        return "scissors";
+    } else {
+        alert("invalid input write only rock paper scissors");
+        getHumanChoice();
+    }
+
 };
 
