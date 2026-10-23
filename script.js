@@ -1,20 +1,3 @@
-// function getHumanChoice() {
-//     let  userInput = prompt("choose one : rock paper scissors").toLowerCase();
-//     if (userInput==="rock") {
-//         console.log("you have chosen ROCK");
-//         return "rock";
-//     } else if (userInput==="paper"){
-//         console.log("you have chosen PAPER");
-//         return "paper";
-//     } else if (userInput==="scissors"){
-//         console.log("you have chosen SCISSORS");
-//         return "scissors";
-//     } else {
-//         alert("invalid input write only rock paper scissors");
-//         return getHumanChoice();
-//     }
-// };
-
 // Global variables 
 let humanScore = 0;
 let computerScore = 0;
@@ -84,6 +67,5 @@ function playRound(humanChoice,computerChoice){
         div.textContent=`${roundMessage} | your score : ${humanScore} and computer score : ${computerScore} ties : ${tieScore}`;
     }
 };
-console.log()
 
 
